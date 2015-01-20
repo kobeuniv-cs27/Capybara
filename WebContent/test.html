@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Tagify Test</title>
+		<link rel="stylesheet" href="css/tagify.css" />
+	</head>
+	<body>
+		<form method="get">
+			<textarea id="tagme" name="tags"></textarea>
+			<input type="submit" />
+		</form>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js">
+		</script>
+	
+		<script type="text/javascript" src="js/jquery.tagify.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#tagme').tagify();
+				$('form').submit(function() {
+					$('#tagme').tagify('serialize');
+				});
+			});
+		</script>
+	</body>
+</html>

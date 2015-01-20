@@ -1,0 +1,295 @@
+
+/* -------------------------------------------------------------------------------- */
+body {
+	width: 100%;
+	height: 900px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: -1px;
+	background: #e9e9e9;
+}
+div, header {
+	margin: 0px;
+	padding: 0px;
+}
+/*
+menu div {
+	display: inline-block;
+	height: 20px;
+	padding: 4px 8px;
+	margin: 0px 8px;
+	height: 20px;
+}
+*/
+header {
+	display: block;
+	width: 100%;
+	height: 34px;
+	margin-left: 0px;
+	background: #509911;
+	font-family: Verdana;
+	font-size: 12px;
+}
+header > div {
+	display: inline-block;
+}
+
+#logo {
+	float: left;
+	padding: 0 40px 0 30px;
+	line-height: 34px;
+	color: #fff;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#logo img {
+	margin: 0px 5px 0 0;
+	position: relative;
+	top: 1px;
+}
+
+#menu {
+}
+
+.menuitems {
+	float: left;
+	line-height: 34px;
+	padding: 0 14px;
+	border-left: 1px solid #509911;
+	margin-left: -5px;
+	background: #408910;
+}
+
+.menuitems img {
+	position: relative;
+	top: 3px;
+	width: 14px;
+	height: 14px;
+	margin-right: 5px;
+}
+.menuitems a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.menuitems a:hover {
+	color: #ffffff;
+	/ text-decoration: underline;
+	cursor: pointer;
+}
+
+#meta {
+	margin-left: 30px;
+}
+
+#meta .wrapper {
+	float: left;
+	margin: 0 4px;
+	line-height: 34px;
+	display: inline-block;
+	margin-left: 10px;
+	color: #ffffff;
+}
+
+
+.selectable p {
+	margin: 0px;
+	position: absolute;
+	top: 1px;
+}
+.selectable:hover {
+	cursor: text;
+}
+
+#meta .wrapper > form {
+	display: inline-block;
+}
+
+#meta .wrapper input {
+	width: 200px;
+	height: 14px;
+	padding: 2px 2px;
+	color: #204000;
+	background: #f0ffe0;
+	border: none;
+	font-family: Verdana;
+	font-size: inherit;
+}
+#meta .wrapper input:focus {
+	color: #204000;
+	background: #ffffff;
+	border: none;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+#main_container {
+	margin-top: 10px;
+}
+
+#main_container > div{
+	vertical-align: top;
+	display: inline-block;
+}
+#tlbox {
+	width: 80px;
+	height: 600px;
+	margin: 0 8px 0 10px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+#tlbox .wrapper {
+	width: 82px;
+	margin-bottom: 8px;
+}
+
+.boxed {
+	border: 1px solid #bbbbbb;
+}
+
+.texttools {
+	display: table-cell;
+	background: #ffffff;
+	width: 80px;
+	height: 50px;
+	margin-bottom: 8px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+/* tlboxのみhover (タッチパネルの挙動の問題により#canvasの.boxed:hoverには適用しない) */
+#tlbox .boxed:hover {
+	border: 1px solid #000000;
+}
+.texttools:hover {
+	background: #eeeeee;
+}
+.texttools:active {
+	background: #aaaaaa;
+}
+
+.texttools p {
+	/display: inline-block;
+	margin: 0;
+	color: #555555;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.icon {
+	/display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-top: 2px;
+}
+
+.disabled {
+	background: #aaaaaa;
+}
+
+#preview_canvas {
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+#brush_size_canvas {
+	display: block;
+	width: 80px;
+	height: 140px;
+	margin: 0 auto;
+}
+
+#color_pick_canvas {
+	display: block;
+	width: 80px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+
+canvas {
+	background: #ffffff;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: crosshair;
+	width: auto;
+}
+
+canvas:active {
+	cursor: crosshair;
+}
+
+
+#draw_canvas {
+	z-index: 10;
+}
+
+
+#draw_canvas {
+	width: 1600px;;
+	height: 900px;
+	position: absolute;
+	float: left;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*
+#records img {
+	width: 30%;
+	height: 30%;
+}
+*/
+#records img {
+	width: 400px;
+	margin: 20px; 20px;
+}
+.record a {
+	margin: 0;
+}
+.record img {
+	width: 100%;
+	height: 100%;
+	border: 4px solid #bbb;
+}
+
+.record .control {
+	height: 30px;
+	width: 100%;
+	position: relative;
+	top: -2px;
+	background: #bbb;
+	border: 4px solid #bbb;
+}
+
+.record .control-bg {
+
+}
+/*
+.record .control:hover {
+	background: black;
+	//opacity: 0.5;
+	background-color: transparent;
+}
+*/
+.record .control-bg span {
+	opacity: 1;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+}
+.pict {
+  border: 5px solid #e9e9e9;
+
+  /*-webkit-box-shadow: 5px 5px 5px #bbb;
+          box-shadow: 5px 5px 5px #bbb;
+*/
+}

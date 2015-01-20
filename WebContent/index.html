@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="css/capybara.css" rel="stylesheet">
+		<link href="css/tagify.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+		<title>Capybara</title>
+	</head>
+
+	<body>
+		<header>
+			<div id="logo">
+				<img src="img/logo.png"></img>
+				Capybara
+			</div>
+			<div id="menu">
+				<div class="menuitems">
+					<a href="./">
+						<img src="img/create2.png" class="icon">
+						create
+					</a>
+				</div>
+				<div class="menuitems">
+					<a href="records.html">
+						<img src="img/records.png" class="icon">
+						records
+					</a>
+				</div>
+			</div>
+
+			<div id="meta">
+				<div class="wrapper">
+					<label>title</label>
+					<form id="title">
+						<input type="text" placeholder="add title">
+					</form>
+				</div>
+				<div class="wrapper">
+					<span>tags</span>
+					<form id="tags">
+						<input class="selectable"></input>
+					</form>
+				</div>
+			</div>
+		</header>
+
+		<div id="main_container">
+			<div id="tlbox">
+				<div class="wrapper">
+					<canvas id="preview_canvas" class="boxed"></canvas>
+				</div>
+				<div class="wrapper">
+					<canvas id="brush_size_canvas" class="boxed"></canvas>
+				</div>
+				<div class="wrapper">
+					<canvas id="color_pick_canvas" class="boxed"></canvas>
+				</div>
+				<div id="undo" class="wrapper">
+					<div class="texttools boxed">
+						<p>undo</p>
+						<img src="img/undo.png" class="icon"></img>
+					</div>
+				</div>
+
+				<div id="redo" class="wrapper">
+					<div class="texttools boxed">
+						<p>redo</p>
+						<img src="img/redo.png" class="icon"></img>
+					</div>
+				</div>
+
+				<div id="clear" class="wrapper">
+					<div class="texttools boxed">
+						<p>clear</p>
+						<img src="img/clear.png" class="icon"></img>
+					</div>
+				</div>
+<!--
+				<div id="create" class="wrapper">
+					<div class="texttools boxed">
+						<p>create</p>
+						<img src="img/.png"></img>
+					</div>
+				</div>
+
+				<div id="save" class="wrapper">
+					<div class="texttools boxed">
+						<p>save</p>
+						<img src="img/save.png"></img>
+					</div>
+				</div>
+
+
+				<div id="restore" class="wrapper">
+					<div class="texttools boxed">
+						<p>restore</p>
+						<img src="img/.png"></img>
+					</div>
+				</div>
+-->
+			</div>
+			<div id="canvas">
+				<canvas id="draw_canvas" class="boxed"></canvas>
+			</div>
+		</div>
+<!--
+		<div id="test">test</div>
+	-->
+
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+		<script src="js/jquery.tagify.js"></script>
+
+		<script src="js/util.js"></script>
+		<script>
+
+$('#tags input').tagify();
+		</script>
+
+		<script src="js/main_canvas.js"></script>
+		<script src="js/tools_canvas.js"></script>
+
+		<!--<script src="js/brush_size_canvas.js"></script>-->
+		<!--<script src="js/color_pick_canvas.js"></script>-->
+		<script src="js/capybara.js"></script>
+
+		<script src="js/test.js"></script>
+	</body>
+
+</html>
