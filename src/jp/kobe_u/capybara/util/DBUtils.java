@@ -23,8 +23,8 @@ public class DBUtils {
 	private final int PORT = 27017;
 	private final String IP_LOCALHOST = "localhost";
 	private final String IP_SERVER = "192.168.0.21";
-	private final String USERNAME = "kenjiro";
-	private final String PASSWORD = "kenjiro+";
+	private final String USERNAME = "hogehoge";
+	private final String PASSWORD = "hogehoge";
 
 	private DBUtils() {
 		//connectLocalMongo();
