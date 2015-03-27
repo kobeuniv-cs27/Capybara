@@ -1,5 +1,5 @@
 var endpoint = 'api';
-//var endpoint = 'http://133.30.159.3:8080/Capybara';
+//var endpoint = 'http://133.30.159.3:8080/capybara';
 
 
 function PrototypeCanvas(div) {
